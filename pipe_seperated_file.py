@@ -20,7 +20,7 @@ with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
     writer.writerow(["Name", "Age", "City"])   # header
     writer.writerows(data)
 
-print(f"✅ Created sample CSV file: {csv_filename}")
+print(f" Created sample CSV file: {csv_filename}")
 print("Contents of sample.csv:")
 with open(csv_filename, 'r', encoding='utf-8') as f:
     print(f.read())
@@ -37,7 +37,7 @@ with open(csv_filename, 'r', newline='', encoding='utf-8') as infile, \
     for row in reader:
         writer.writerow(row)
 
-print(f"\n✅ Converted to pipe-separated file: {pipe_filename}")
+print(f"\n Converted to pipe-separated file: {pipe_filename}")
 print("Contents of sample_pipe.txt:")
 with open(pipe_filename, 'r', encoding='utf-8') as f:
     print(f.read())

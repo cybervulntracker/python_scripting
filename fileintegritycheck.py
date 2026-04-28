@@ -20,12 +20,12 @@ def save_hash(file_path):
     with open("hash.txt", "w") as f:
         f.write(file_hash)
 
-    print("✅ Hash saved successfully!")
+    print(" Hash saved successfully!")
 
 
 def check_file(file_path):
     if not os.path.exists("hash.txt"):
-        print("❌ No saved hash found! Run save first.")
+        print(" No saved hash found! Run save first.")
         return
 
     current_hash = calculate_hash(file_path)
@@ -37,9 +37,9 @@ def check_file(file_path):
     print("Current Hash:", current_hash)
 
     if current_hash == saved_hash:
-        print("✅ File is NOT modified")
+        print("File is NOT modified")
     else:
-        print("⚠️ File has been modified!")
+        print(" File has been modified!")
 
 
 # -------- LOOP --------
@@ -47,7 +47,7 @@ while True:
     file_path = input("\nEnter file path: ").strip().strip('"').strip("'")
 
     if not os.path.exists(file_path):
-        print("❌ File not found!")
+        print(" File not found!")
         continue
 
     choice = input("Type 'save', 'check' or 'exit': ").lower()
@@ -59,8 +59,8 @@ while True:
         check_file(file_path)
 
     elif choice == "exit":
-        print("👋 Exiting...")
+        print("Exiting...")
         break
 
     else:
-        print("❌ Invalid option!")
+        print("Invalid option!")

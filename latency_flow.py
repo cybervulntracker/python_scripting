@@ -75,7 +75,7 @@ while True:
 
         os.system("clear" if os.name != "nt" else "cls")
 
-        print("📡 WiFi Congestion Visualizer\n")
+        print(" WiFi Congestion Visualizer\n")
 
         print(f"Target      : {PING_TARGET}")
         print(f"Latency     : {latency} ms")
